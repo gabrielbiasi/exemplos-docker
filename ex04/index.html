@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Minha incrível página em HTML</title>
+    </head>
+    <body>
+        <h1>Olá mundo eu vim do DockerHub!</h1>
+        <p>Este site estava dentro de uma imagem Docker. Que agora foi executada como um container.</p>
+        <img id="dog" style="max-height: 500px;" src="" alt="Carregando...">
+    </body>
+    <script>
+        fetch("https://dog.ceo/api/breeds/image/random")
+        .then((resp) => resp.json())
+        .then((data) => {
+            console.log(data)
+            document.getElementById('dog').src = data.message
+        })
+    </script>
+</html>

@@ -1,0 +1,13 @@
+version: "3.0"
+services:
+  web1:
+    build:
+      context: .
+    ports:
+      - "8001:3000"
+  web2:
+    build:
+      context: .
+      dockerfile: Dockerfile2
+    ports:
+      - "8002:3000"
